@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NSTP IMMERSION</title>
+<style>
+  :root {
+    --primary-color: #2a9d8f;
+    --secondary-color: #264653;
+    --accent-color: #e76f51;
+    --bg-color: #f0f4f8;
+    --text-color: #333;
+    --card-bg: #fff;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    background: var(--primary-color);
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 6px var(--shadow);
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+  }
+
+  main {
+    max-width: 900px;
+    padding: 2rem 1rem 4rem;
+    width: 100%;
+  }
+
+  section.participants {
+    margin-bottom: 3rem;
+  }
+
+  section.participants h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    box-shadow: 0 2px 8px var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px var(--shadow);
+  }
+
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-name {
+    padding: 0.8rem 0 0.3rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+  }
+
+  .card-reflection {
+    padding: 0 1rem 1.2rem;
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    flex-grow: 1;
+    font-style: italic;
+    text-align: left;
+  }
+
+  section.nstp-info {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem 2rem 2rem 2rem;
+    box-shadow: 0 2px 8px var(--shadow);
+    margin-bottom: 3rem;
+  }
+
+  section.nstp-info h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.4rem;
+    letter-spacing: 1.3px;
+    text-align: center;
+  }
+
+  section.nstp-info p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+  }
+
+  section.reflection {
+    background: var(--card-bg);
+    padding: 2rem 2rem 2rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+
+  section.reflection h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 1.5px;
+  }
+
+  section.reflection p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--secondary-color);
+    max-width: 700px;
+    margin: 0 auto;
+    white-space: pre-line;
+  }
+
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    section.participants h2,
+    section.nstp-info h2,
+    section.reflection h2 {
+      font-size: 1.5rem;
+    }
+    .grid {
+      grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    }
+    .card img {
+      height: 130px;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>NSTP IMMERSION</h1>
+  </header>
+  <main>
+    <section class="participants">
+      <h2>Participants</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Juan Dela Cruz" />
+          <div class="card-name">Juan Dela Cruz</div>
+          <div class="card-reflection">Participating in NSTP Immersion opened my eyes to the real challenges faced by communities and strengthened my commitment to serve with empathy.</div>
+        </div>
+        <div class="card">
+          <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="Maria Santos" />
+          <div class="card-name">Maria Santos</div>
+          <div class="card-reflection">I learned the importance of teamwork and community unity, skills that I value deeply from this immersion experience.</div>
+        </div>
+        <div class="card">
+          <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="Luis Ramirez" />
+          <div class="card-name">Luis Ramirez</div>
+          <div class="card-reflection">The immersion enhanced my social awareness and inspired me to take initiative in local community projects.</div>
+        </div>
+        <div class="card">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Ana Lopez" />
+          <div class="card-name">Ana Lopez</div>
+          <div class="card-reflection">Engaging closely with the community taught me the value of listening and responding to real needs.</div>
+        </div>
+        <div class="card">
+          <img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Pedro Mendoza" />
+          <div class="card-name">Pedro Mendoza</div>
+          <div class="card-reflection">Through NSTP Immersion, I developed a stronger sense of responsibility and hope to encourage others to serve.</div>
+        </div>
+        <div class="card">
+          <img src="https://randomuser.me/api/portraits/women/61.jpg" alt="Cristina Garcia" />
+          <div class="card-name">Cristina Garcia</div>
+          <div class="card-reflection">It was inspiring to witness community resilience and the power of collective effort during this immersion.</div>
+        </div>
+        <div class="card">
+          <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="Josefa Cruz" />
+          <div class="card-name">Josefa Cruz</div>
+          <div class="card-reflection">NSTP Immersion gave me the chance to practice leadership and helped me understand cultural diversity better.</div>
+        </div>
+        <div class="card">
+          <img src="https://randomuser.me/api/portraits/women/81.jpg" alt="Diana Reyes" />
+          <div class="card-name">Diana Reyes</div>
+          <div class="card-reflection">Seeing the impact of small acts of service was very fulfilling and motivates me to keep contributing.</div>
+        </div>
+        <div class="card">
+          <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="Marco Aurelio" />
+          <div class="card-name">Marco Aurelio</div>
+          <div class="card-reflection">The immersion experience enriched my understanding of community issues and taught me valuable life lessons.</div>
+        </div>
+        <div class="card">
+          <img src="https://randomuser.me/api/portraits/women/99.jpg" alt="Luz Fernandez" />
+          <div class="card-name">Luz Fernandez</div>
+          <div class="card-reflection">I feel grateful for the opportunity to connect with people and contribute meaningfully to community development.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nstp-info">
+      <h2>About NSTP Immersion</h2>
+      <p><strong>What is NSTP Immersion?</strong> <br />
+      NSTP (National Service Training Program) Immersion is a program designed to immerse students into different communities to expose them to social realities and promote civic consciousness through actual community service and engagement.</p>
+      <p><strong>What is its purpose?</strong> <br />
+      The purpose of NSTP Immersion is to develop the students’ appreciation of their rights and duties as citizens, encourage active participation in community development, and to enhance their sense of nationalism and social responsibility.</p>
+      <p><strong>What did it contribute?</strong> <br />
+      NSTP Immersion contributes by empowering youth to become active and committed citizens, building stronger communities through service projects, and fostering collaboration between educational institutions and local communities for sustainable development.</p>
+    </section>
+
+    <section class="reflection">
+      <h2>My Reflection</h2>
+      <p>
+        The NSTP immersion experience allowed me to gain a deeper understanding of the community's needs and challenges.
+        Meeting and working alongside the participants inspired a renewed sense of responsibility and commitment to serve.
+        Each participant brought their unique perspectives and energy, enriching the overall experience.
+        This immersion fostered personal growth and reinforced the values of teamwork, empathy, and civic consciousness.
+        It was a meaningful journey that motivates me to continue contributing positively to society.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
+
+
